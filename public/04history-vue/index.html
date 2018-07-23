@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>history 路由</title>
+</head>
+<body>
+  <div id="app">
+    <p>
+        <router-link to="/">home</router-link>
+        <router-link to="/movie">movie</router-link>
+        <router-link to="/book">book</router-link>
+    </p>
+    <router-view></router-view>
+  </div>
+  <script src="https://vuejs.org/js/vue.js"></script>
+  <script src="./vue-router.js"></script>
+  <script>
+    // 定义组件
+    const home = {template:"<div>home</div>"}
+    const movie = {template:"<div>movie</div>"}
+    const book = {template:"<div>book</div>"}
+    const router = [
+      {
+        path:"/",
+        component:home
+      },
+      {
+        path:"/movie",
+        component:movie
+      },
+      {
+        path:"/book",
+        component:book
+      }
+    ]
+    let route = new VueRouter(Vue,router)
+    new Vue({
+      el: '#app'
+    })
+  </script>
+</body>
+</html>
