@@ -11,13 +11,10 @@
 ## 使用方法
 
 ``` bash
-ES6
-import vueRouterPlugin from 'vue-router-plugin'
 
+import vueRouterPlugin from 'vue-router-plugin'
 // 路由参数
 import routerOptions from './router/index'
-// 路由插件
-import vueRouter from './lib/index'
 // 通过use挂载
 Vue.use(vueRouterPlugin,routerOptions)
 ```
